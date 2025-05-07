@@ -4,13 +4,13 @@ let buttons = Array.from(document.querySelectorAll(".button"));
 
 buttons.map((button) => {
     button.addEventListener("click", (Event) => {
-        switch(Event.target.innerText) {  // Syntaxe corrigée
+        switch(Event.target.innerText) {  
             case "C": {
                 result.innerText = "";
                 result1.innerText = "";
                 break;
             }
-            case "←": {  // Corrigé pour la flèche (si tu veux gérer le retour arrière)
+            case "←": {  
                 if (result.innerText.length > 0) {
                     result.innerText = result.innerText.slice(0, -1);
                 }
@@ -18,7 +18,7 @@ buttons.map((button) => {
             }
             case "=": {
                 try {  
-                    result1.innerText = eval(result.innerText);  // Évalue "result"
+                    result1.innerText = eval(result.innerText);  
                 } catch {
                     result1.innerText = "Erreur";
                 }
